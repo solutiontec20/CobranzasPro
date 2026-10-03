@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CobranzaPro - Administración y Cobranza de Préstamos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Inmediata detección y aplicación de tema para evitar FOUC
+    const savedTheme = localStorage.getItem('cobranzapro_theme') || 
+      (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body>
+  <div id="app">
+    <!-- El contenido se inyectará dinámicamente mediante app.js -->
+  </div>
+
+  <!-- Contenedor global de Toasts -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Contenedor para Modales Dinámicos -->
+  <div id="modalContainer"></div>
+
+  <!-- Script principal de la aplicación -->
+  <script src="app.js"></script>
+</body>
+</html>
